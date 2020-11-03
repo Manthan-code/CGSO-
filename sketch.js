@@ -29,7 +29,8 @@ if(wall.x- car.x<wall.width/2+car.width/2
   &&car.x-wall.x<car.width/2+wall.width/2 
   &&wall.x- car.x<wall.width/2+car.width/2
   &&car.x-wall.x<car.width/2+wall.width/2 ){
- {
+
+ 
 if(deformr<100){
 car.shapeColor=0,225,0;
 }
@@ -39,7 +40,7 @@ if(deformr(100,180)){
   if(deformr>180){
     car.shapeColor=225,0,0;
     }
- }
+ car.velocityX=0;
 }
 
 
