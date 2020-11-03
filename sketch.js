@@ -16,9 +16,7 @@ function setup() {
   
   wall.shapeColor=rgb(80,80,80);
 
-  Text(speed,1000,350);
-  Text(weight,1000,350);
-  Text(deform,1000,350);
+  
  
 }
 
@@ -47,3 +45,7 @@ if(deformr(100,180)){
 
   drawSprites();
 }
+
+Text(speed,1000,350);
+Text(weight,1000,350);
+Text(deform,1000,350);
