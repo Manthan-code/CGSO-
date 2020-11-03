@@ -1,53 +1,48 @@
-var Space3,Space2,Space1;
-var WCar,RCar,YCar,GCar;
-var crasher1,crasher2,crasher3,crasher4;
+var wall,car;
+var speed, weight;
+
+
 
 function setup() {
-  createCanvas(800,800);
-  Space1=createSprite(400, 200,800,20);
-  Space2=createSprite(400, 400,800,20);
-  Space3=createSprite(400, 600,800,20);
-  Space3.shapeColor="white";
-  Space2.shapeColor="white";
-  Space1.shapeColor="white";
+  createCanvas(1600,400);
+  speed = random(55,290);
+  weight = random(400,1500);
 
-  WCar=createSprite(60,100,50,50);
-  RCar=createSprite(60,300,50,50);
-  YCar=createSprite(60,500,50,50);
-  GCar=createSprite(60,700,50,50);
-  WCar.shapeColor="white";
-  RCar.shapeColor="red";
-  YCar.shapeColor="yellow";
-  GCar.shapeColor="green";
+  car=createSprite(400, 200,800,20);
+  car.shapeColor="white";
+  car.velocityX= speed;
 
+  wall=createSprite(1500,100,50,200);
+  
+  wall.shapeColor=rgb(80,80,80);
 
-
-  crasher1=createSprite(740,100,15,100);
-  crasher2=createSprite(740,300,15,100);
-  crasher3=createSprite(740,500,15,100);
-  crasher4=createSprite(740,700,15,100);
-
-  WCar.velocityX=5;
-  RCar.velocityX=5;
-  YCar.velocityX=5;
-  GCar.velocityX=5;
-
+  Text(speed,1000,350);
+  Text(weight,1000,350);
+  Text(deform,1000,350);
+ 
 }
 
 function draw() {
-  background("BLACK");  
+  background("BLACK"); 
 
+ defomr =0.5*weight*speed*speed ;
 
-
-
-  WCar.bounceOff(crasher1);
-  RCar.bounceOff(crasher2);
-  YCar.bounceOff(crasher3);
-  GCar.bounceOff(crasher4);
-
-
-
-
+if(wall.x- car.x<wall.width/2+car.width/2
+  &&car.x-wall.x<car.width/2+wall.width/2 
+  &&wall.x- car.x<wall.width/2+car.width/2
+  &&car.x-wall.x<car.width/2+wall.width/2 ){
+ {
+if(deformr<100){
+car.shapeColor=0,225,0;
+}
+if(deformr(100,180)){
+  car.shapeColor=230,230,0;
+  }
+  if(deformr>180){
+    car.shapeColor=225,0,0;
+    }
+ }
+}
 
 
   drawSprites();
